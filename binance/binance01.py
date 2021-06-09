@@ -26,7 +26,10 @@ def openOrders():
     asset_input = input("Symbol(eg: ADAUST): ")
     openorders = str(client.get_open_orders(symbol= asset_input))
     print(openorders)
-    print(type(openorders))
+    values = openorders.split(",")
+    for value in values:
+        print(value)
+
 
 
 

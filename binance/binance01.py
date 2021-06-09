@@ -2,23 +2,33 @@ import os
 from binance.client import Client
 
 
-
-api_key = input("input your key:")
-api_secret = input("input your secret key:")
+print("-------------WELCOME----------------")
+print("                                    ")
+api_key = input("input your key: ")
+api_secret = input("input your secret key: ")
 client = Client(api_key, api_secret)
 
-action = input("what do you wanna do?(BALANCE / PRICE)")
+action = input("what do you wanna do?(BALANCE / PRICE / OPENORDERS)")
 
 
 
 def checkBalance():
-    asset_input = input("asset:")
+    asset_input = input("asset: ")
     print(client.get_asset_balance(asset=asset_input))
 
 def checkPrice():
-    asset_input = input("Symbol(eg: ADAUST)")
+    asset_input = input("Symbol(eg: ADAUST): ")
     asset_price = client.get_symbol_ticker(symbol=asset_input)
     print(asset_price)
+
+
+def openOrders():
+    asset_input = input("Symbol(eg: ADAUST): ")
+    openorders = str(client.get_open_orders(symbol= asset_input))
+    print(openorders)
+    print(type(openorders))
+
+
 
 
 if action == "BALANCE":
@@ -27,3 +37,9 @@ if action == "BALANCE":
 # getting the latest price
 elif action == "PRICE":
     checkPrice()
+
+elif action == "OPENORDERS" or action == "oo":
+    openOrders()
+
+else:
+    print("wrong input")

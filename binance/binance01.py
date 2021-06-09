@@ -15,6 +15,15 @@ def checkBalance():
     asset_input = input("asset:")
     print(client.get_asset_balance(asset=asset_input))
 
+def checkPrice():
+    asset_input = input("Symbol(eg: ADAUST)")
+    asset_price = client.get_symbol_ticker(symbol=asset_input)
+    print(asset_price)
+
 
 if action == "BALANCE":
     checkBalance()
+
+# getting the latest price
+elif action == "PRICE":
+    checkPrice()

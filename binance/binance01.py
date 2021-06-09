@@ -2,14 +2,6 @@ import os
 from binance.client import Client
 
 
-print("-------------WELCOME----------------")
-print("                                    ")
-api_key = input("input your key: ")
-api_secret = input("input your secret key: ")
-client = Client(api_key, api_secret)
-
-action = input("what do you wanna do?(BALANCE / PRICE / OPENORDERS)")
-
 
 
 def checkBalance():
@@ -19,30 +11,41 @@ def checkBalance():
 def checkPrice():
     asset_input = input("Symbol(eg: ADAUST): ")
     asset_price = client.get_symbol_ticker(symbol=asset_input)
-    print(asset_price)
-
+    for key, value in asset_price.items():
+        print(key, ':', value)
 
 def openOrders():
     asset_input = input("Symbol(eg: ADAUST): ")
     openorders = str(client.get_open_orders(symbol= asset_input))
-    print(openorders)
     values = openorders.split(",")
     for value in values:
         print(value)
 
 
+print("-------------WELCOME----------------")
+print("                                    ")
+api_key = input("input your key: ")
+api_secret = input("input your secret key: ")
+client = Client(api_key, api_secret)
+
+def main():
+    action = input("what do you wanna do?(BALANCE(b) / PRICE(p) / OPENORDERS(oo))")
+
+    if action == "BALANCE" or action == "b":
+        checkBalance()
 
 
+    # getting the latest price
+    elif action == "PRICE" or action == "p":
+        checkPrice()
 
-if action == "BALANCE":
-    checkBalance()
 
-# getting the latest price
-elif action == "PRICE":
-    checkPrice()
+    elif action == "OPENORDERS" or action == "oo":
+        openOrders()
 
-elif action == "OPENORDERS" or action == "oo":
-    openOrders()
 
-else:
-    print("wrong input")
+    else:
+        print("wrong input")
+
+while True:
+    main()

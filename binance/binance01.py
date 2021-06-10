@@ -37,24 +37,24 @@ def trade():
         # MARKET LIMIT ORDER
         if(trade_type == "LIMIT" or trade_type == "L"):
 
-            try:
-                trade_limit_price = float(input("specify limit order price: "))
-                buy_order_limit = client.create_test_order(
-                symbol='trade_symbole',
-                side='BUY',
-                type='LIMIT',
-                timeInForce='GTC',
-                quantity= trade_amount,
-                price=trade_limit_price
-                )
-                print(trade_limit_price)
+            # try:
+            trade_limit_price = float(input("specify limit order price: "))
+            buy_order_limit = client.create_test_order(
+            symbol=trade_symbole,
+            side='BUY',
+            type='LIMIT',
+            timeInForce='GTC',
+            quantity= trade_amount,
+            price=trade_limit_price
+            )
+            print(buy_order_limit)
 
-            except BinanceAPIException as e:
-                # error handling goes here
-                print("Binance API Exception Error")
-            except BinanceOrderException as e:
-                # error handling goes here
-                print("Binance Order Exception Error")
+            # except BinanceAPIException as e:
+            #     # error handling goes here
+            #     print("Binance API Exception Error")
+            # except BinanceOrderException as e:
+            #     # error handling goes here
+            #     print("Binance Order Exception Error")
 
         # MARKET BUY ORDER
         elif(trade_type == "MARKET" or trade_type == "M"):
@@ -64,7 +64,7 @@ def trade():
                 side= 'BUY',
                 type= 'MARKET',
                 quantity= trade_amount)
-                print(trade_limit_price)
+                print(buy_order)
 
             except BinanceAPIException as e:
                 # error handling goes here

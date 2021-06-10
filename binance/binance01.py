@@ -57,7 +57,6 @@ def trade():
 
 
 
-
 print("-------------WELCOME----------------")
 print("                                    ")
 api_key = input("input your key: ")

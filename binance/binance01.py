@@ -1,18 +1,20 @@
 import os
 from binance.client import Client
 
-
-
-
 def checkBalance():
     asset_input = input("asset: ")
-    print(client.get_asset_balance(asset=asset_input))
+    asset_balance = client.get_asset_balance(asset=asset_input)
+
+    for key, value in asset_balance.items():
+        print(key, ':', value)
+    print("-----------------------------")
 
 def checkPrice():
     asset_input = input("Symbol(eg: ADAUST): ")
     asset_price = client.get_symbol_ticker(symbol=asset_input)
     for key, value in asset_price.items():
         print(key, ':', value)
+    print("-----------------------------")
 
 def openOrders():
     asset_input = input("Symbol(eg: ADAUST): ")
@@ -20,6 +22,13 @@ def openOrders():
     values = openorders.split(",")
     for value in values:
         print(value)
+    print("-----------------------------")
+
+
+def trade():
+    trade_asset = input("asset: ")
+    trade_action = input("BUY | SELL : ")
+    trade_amount = int(input("amount: "))
 
 
 print("-------------WELCOME----------------")

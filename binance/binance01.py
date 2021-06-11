@@ -39,6 +39,7 @@ def trade():
 
             try:
                 trade_limit_price = float(input("specify limit order price: "))
+                # to make a real order remove "_test"
                 buy_order_limit = client.create_test_order(
                 symbol=trade_symbole,
                 side='BUY',
@@ -59,6 +60,7 @@ def trade():
         # MARKET BUY ORDER
         elif(trade_type == "MARKET" or trade_type == "M"):
             try:
+                # to make a real order remove "_test"
                 buy_order = client.create_test_order(
                 symbol= trade_symbole,
                 side= 'BUY',
@@ -78,6 +80,7 @@ def trade():
     elif(trade_action == "SELL"):
 
         try:
+            # to make a real order remove "_test"
             trade_limit_price = float(input("specify limit order price: "))
             sell_order_limit = client.create_test_order(
             symbol=trade_symbole,
@@ -105,6 +108,7 @@ def trade():
 # MARKET BUY ORDER
     elif(trade_type == "MARKET" or trade_type == "M"):
         try:
+            # to make a real order remove "_test"
             sell_order = client.create_test_order(
             symbol= trade_symbole,
             side= 'SELL',
@@ -129,7 +133,7 @@ api_secret = input("input your secret key: ")
 client = Client(api_key, api_secret)
 
 def main():
-    action = input("what do you wanna do?(BALANCE(b) / PRICE(p) / OPENORDERS(oo)) / TRADE(T)")
+    action = input("what do you wanna do? /n 1) Check your balace for an asset: BALANCE(b) \n 2) Check the price for an asset: PRICE(p) /n 3) Check your open Orders: OPENORDERS(oo) /n 4) trade: TRADE(T)")
 
     if action == "BALANCE" or action == "b":
         checkBalance()

@@ -133,7 +133,7 @@ api_secret = input("input your secret key: ")
 client = Client(api_key, api_secret)
 
 def main():
-    action = input("what do you wanna do? /n 1) Check your balace for an asset: BALANCE(b) \n 2) Check the price for an asset: PRICE(p) /n 3) Check your open Orders: OPENORDERS(oo) /n 4) trade: TRADE(T)")
+    action = input("what do you wanna do? \n 1) Check your balace for an asset: BALANCE(b) \n 2) Check the price for an asset: PRICE(p) \n 3) Check your open Orders: OPENORDERS(oo) \n 4) trade: TRADE(T)")
 
     if action == "BALANCE" or action == "b":
         checkBalance()

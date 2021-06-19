@@ -131,6 +131,7 @@ print("                                    ")
 print("                                    ")
 api_key = input("input your key: ")
 api_secret = input("input your secret key: ")
+print("user verified")
 client = Client(api_key, api_secret)
 
 def main():

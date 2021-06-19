@@ -128,6 +128,7 @@ def trade():
 
 print("-------------WELCOME----------------")
 print("                                    ")
+print("                                    ")
 api_key = input("input your key: ")
 api_secret = input("input your secret key: ")
 client = Client(api_key, api_secret)

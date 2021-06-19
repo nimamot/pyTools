@@ -82,7 +82,7 @@ def trade():
         try:
             # to make a real order remove "_test"
             trade_limit_price = float(input("specify limit order price: "))
-            sell_order_limit = client.create_order(
+            sell_order_limit = client.create_test_order(
             symbol=trade_symbole,
             side='SELL',
             type='LIMIT',

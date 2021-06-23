@@ -145,7 +145,7 @@ def main():
     elif action == "PRICE" or action == "p":
         checkPrice()
 
-
+    #getting the open orders
     elif action == "OPENORDERS" or action == "oo":
         openOrders()
 

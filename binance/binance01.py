@@ -148,7 +148,7 @@ def main():
     #getting the open orders
     elif action == "OPENORDERS" or action == "oo":
         openOrders()
-
+    #trading
     elif action == "TRADE" or action == "T":
         trade()
 

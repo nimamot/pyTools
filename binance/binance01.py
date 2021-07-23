@@ -3,7 +3,19 @@ from binance.client import Client
 from binance.enums import *
 from binance.exceptions import BinanceAPIException, BinanceOrderException
 # imports for the GUI
-import tkinter
+import tkinter as tk
+
+# window = tk.Tk()
+# window.title("GUI")
+# label = tk.Label(window, text="Binance API Access").pack()
+# aPI_key_entry = tk.Entry(window).pack()
+# aPI_pass_entry = tk.Entry(window).pack()
+# apiKey = aPI_key_entry.get()
+# apiPass = aPI_pass_entry.get()
+# login_btn = tk.Button(window, text="Login").pack()
+# window.mainloop()
+#
+# print(apiKey)
 
 def checkBalance():
     asset_input = input("asset: ")

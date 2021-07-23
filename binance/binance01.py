@@ -2,6 +2,8 @@ import os
 from binance.client import Client
 from binance.enums import *
 from binance.exceptions import BinanceAPIException, BinanceOrderException
+# imports for the GUI
+import tkinter
 
 def checkBalance():
     asset_input = input("asset: ")

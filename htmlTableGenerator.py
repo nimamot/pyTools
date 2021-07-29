@@ -2,7 +2,7 @@ rows = input("number of rows")
 columns = input("numbber of columns")
 
 table_header = ""
-table_headers = columns*'<th class="tg-0lax"> </th>'
+table_headers = '<th class="tg-0lax"> </th>'
 
 
 final_code = """

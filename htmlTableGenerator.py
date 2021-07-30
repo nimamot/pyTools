@@ -1,6 +1,6 @@
-rows = int(input("number of rows"))
-columns = int(input("numbber of columns"))
-
+rows = int(input("number of rows: "))
+columns = int(input("numbber of columns:"))
+css_Q = input("would you like the CSS code generated as well?(Y/N)")
 table_header = ""
 table_headers = columns*'    <th class="tg-0lax"> </th> \n'
 
@@ -27,5 +27,6 @@ final_code =  """
 """ + """
   <tr> \n""" + table_headers + """ </tr> \n</thead>
 <tbody>""" + table_rows + """ </tbody>\n </table> """
+
 
 print(final_code)

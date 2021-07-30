@@ -1,6 +1,5 @@
 rows = int(input("number of rows: "))
-columns = int(input("numbber of columns:"))
-css_Q = input("would you like the CSS code generated as well?(Y/N)")
+columns = int(input("numbber of columns: "))
 table_header = ""
 table_headers = columns*'    <th class="tg-0lax"> </th> \n'
 

@@ -1,11 +1,11 @@
-rows = input("number of rows")
-columns = input("numbber of columns")
+rows = int(input("number of rows"))
+columns = int(input("numbber of columns"))
 
 table_header = ""
-table_headers = '<th class="tg-0lax"> </th>'
+table_headers = columns*'    <th class="tg-0lax"> </th> \n'
 
 
-final_code = """
+final_code =  """
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -18,6 +18,8 @@ final_code = """
 <table class="tg">
 <thead>
 
-"""
+""" + """
+  <tr> \n""" + table_headers + """ </tr> \n</thead>
+<tbody>"""
 
 print(final_code)

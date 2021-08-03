@@ -6,12 +6,12 @@
   + This Script was written because I was too lazy too run the commands every time myself.
 
 #Binance.py
-  a simple trading console app using Binance API.
+  + A simple trading console app using Binance API.
   
   #Featurss:
-      Authentication with user's API keys.
-      Realtime Market/Limit orders.
-      Realtime price cheack for all assets listed on Binance.
-      Ballance chack for holding assets.
-      Orders Status-chack.
+      + Authentication with user's API keys.
+      + Realtime Market/Limit orders.
+      + Realtime price cheack for all assets listed on Binance.
+      + Ballance chack for holding assets.
+      + Orders Status-chack.
     

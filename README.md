@@ -9,7 +9,7 @@
 #Binance.py
   + A simple trading console app using Binance API.
   
-  #Featurse:
+  + Featurse:
     + Authentication with user's API keys.
     + Realtime Market/Limit orders.
     + Realtime price cheack for all assets listed on Binance.

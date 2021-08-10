@@ -17,5 +17,5 @@
     + Orders Status-chack.
 
 #htmlpicgenerator.py, htmltablegenartor.py:
-   + htmltablegenerator.py is a simple python scripts which generates HTML tables. The scripts asks the user how many rows/columns thw table should have as well as if it should generate the css code.
+   + htmltablegenerator.py is a simple python scripts which generates HTML tables. The scripts asks the user how many rows/columns the table should have as well as if it should generate the css code.
    + htmlpicgenerator.py generates HTML picture tags with enbeded bootstrap classes.     

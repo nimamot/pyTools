@@ -1,7 +1,7 @@
 # pyTools
 
 #push.py
-  + A short python Script using the os library written solely to push code up to githob.
+  + A short python Script using the os library written solely to push code up to github.
   + The script runs all the basic commands( add, commit, push) automatically andd just ask the user for a comment.
   + This Script was written because I was too lazy too run the commands every time myself.
 
